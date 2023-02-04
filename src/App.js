@@ -1,25 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import Navbar from './components/Navbar'
+import Landing from './pages/Landing';
+import Skills from './pages/Skills';
+import Scroll from './components/Scroll';
+
+import React, { useEffect, useState } from 'react'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
+import Projects from './pages/Projects';
+
+function Main() {
+
+  const scrollManager = new Scroll('/', 'skills')
+  const navigate = useNavigate();
+
+
+  const pageUp = (e) => {
+
+    navigate(scrollManager.up)
+
+  }
+
+  const pageDown = (e) => {
+
+    navigate(scrollManager.down)
+
+  }
+
+  const swipeHandler = useSwipeable({
+    onSwipedUp: pageUp,
+    onSwipedDown: pageDown
+  })
+
+
+  const location = useLocation();
+  return (
+    <div {...swipeHandler} className="App">
+      <AnimatePresence mode="wait" initial={false} >
+        <Routes location={location} key={location.pathname}>
+
+          <Route path="/" element={
+            <Landing scrollManager={scrollManager} pageUp={pageUp} pageDown={pageDown}></Landing>
+          }></Route>
+
+          <Route path="/skills" element={
+            <Skills scrollManager={scrollManager} pageUp={pageUp} pageDown={pageDown}></Skills>
+          }></Route>
+
+          <Route path="/projects" element={
+            <Projects scrollManager={scrollManager} pageUp={pageUp} pageDown={pageDown}></Projects>
+          }></Route>
+
+        </Routes>
+
+      </AnimatePresence >
+    </div>
+  )
+}
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Main></Main>
+    </Router>
   );
 }
 
 export default App;
+
