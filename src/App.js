@@ -11,6 +11,7 @@ import { AnimatePresence } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 import Projects from './pages/Projects';
+import About from './pages/About';
 
 function Main() {
 
@@ -52,6 +53,10 @@ function Main() {
 
           <Route path="/projects" element={
             <Projects scrollManager={scrollManager} pageUp={pageUp} pageDown={pageDown}></Projects>
+          }></Route>
+
+          <Route path="/about" element={
+            <About scrollManager={scrollManager} pageUp={pageUp} pageDown={pageDown}></About>
           }></Route>
 
         </Routes>

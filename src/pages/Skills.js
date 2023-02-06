@@ -8,7 +8,68 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Topbar from '../components/Topbar';
 
+import react from '../imgs/skills/react.svg'
+import express from '../imgs/skills/express.svg'
+import symfony from '../imgs/skills/symfony.svg'
+import bootstrap from '../imgs/skills/bootstrap.svg'
+import c from '../imgs/skills/c.svg'
+import java from '../imgs/skills/java.svg'
+import python from '../imgs/skills/python.svg'
+import androidStudio from '../imgs/skills/android-studio.svg'
+import mariadb from '../imgs/skills/mariadb.svg'
+import oracle from '../imgs/skills/oracle.png'
+import mongodb from '../imgs/skills/mongodb.svg'
+import linux from '../imgs/skills/linux.svg'
+import git from '../imgs/skills/git.svg'
+import autoit from '../imgs/skills/autoit.svg'
+import gimp from '../imgs/skills/gimp.png'
 
+/*
+
+Web : react express symfony bootstrap 
+General programming : C Java Python AndroidStudio
+bdd : mysql Oracle mongodb
+other tools : linux git autoit gimp
+*/
+
+const SKILLS = [
+    {
+        title: "Web",
+        icons: [
+            [react, "React"],
+            [express, "ExpressJS"],
+            [symfony, "Symfony"],
+            [bootstrap,"Bootstrap"],
+            
+        ]
+    },
+    {
+        title: "General Programming",
+        icons: [
+            [c, "C"],
+            [java, "Java"],
+            [python, "Python"],
+            [androidStudio, "Android Studio"]
+        ]
+    },
+    {
+        title: "Databases",
+        icons: [
+            [mariadb, "MariaDB"],
+            [oracle, "Oracle Database"],
+            [mongodb, "MongoDB"]
+        ]
+    },
+    {
+        title: "Other Tools",
+        icons: [
+            [linux, "Linux"],
+            [git, "Git"],
+            [autoit, "AutoIt"],
+            [gimp, "GIMP"]
+        ]
+    }
+]
 const variants = {
  
     containerLine: {
@@ -34,48 +95,6 @@ const variants = {
 
 
 
-const SKILLS = [
-    {
-        title: "Aaaaaa",
-        icons: [
-            andrea,
-            andrea,
-            andrea,
-            andrea,
-            andrea
-        ]
-    },
-    {
-        title: "Bbbbbb",
-        icons: [
-            andrea,
-            andrea,
-            andrea,
-            andrea
-        ]
-    },
-    {
-        title: "Cccccc",
-        icons: [
-            andrea,
-            andrea,
-            andrea,
-            andrea,
-            andrea,
-            andrea
-        ]
-    },
-    {
-        title: "Dddddd",
-        icons: [
-            andrea,
-            andrea,
-            andrea,
-            andrea,
-            andrea
-        ]
-    }
-]
 
 const SkillIcon = (props) => {
     return (
@@ -83,7 +102,8 @@ const SkillIcon = (props) => {
 
             className="SkillIcon"
         >
-            <img src={props.src}></img>
+            <img src={props.src[0]} title={props.src[1]} alt={"Logo of " + props.src[1]}></img>
+            <p>{props.src[1]}</p>
         </motion.div>
     )
 }
@@ -95,7 +115,7 @@ const Skill = (props) => {
             <motion.div
 
                 variants={variants.line}
-                className="Skill"
+                className="Skill page"
             >
                 <h3>{props.skill.title}</h3>
                 <div>
@@ -129,7 +149,7 @@ const Skills = (props) => {
 
             <div className='flex-container'>
                 <div className='speech'>
-                    Irure Lorem pariatur tempor consequat mollit nulla occaecat. Consectetur irure labore minim sint Lorem non magna tempor labore anim commodo.
+                <p>Here are the tools I master. I'm constantly trying to improve my projects by looking for the latest innovations that can benefit me.</p> 
                 </div>
                 <motion.div
                     initial="initial"
@@ -137,7 +157,7 @@ const Skills = (props) => {
                     variants={variants.containerLine}
                 >
                     {Object.keys(SKILLS).map((key) => {
-                        return <><Skill key={key} skill={SKILLS[key]}></Skill></>
+                        return <Skill key={key} skill={SKILLS[key]}></Skill>
                     })}
                 </motion.div>
             </div>
@@ -148,3 +168,5 @@ const Skills = (props) => {
 
 
 export default Skills;
+
+

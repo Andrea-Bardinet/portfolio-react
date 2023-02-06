@@ -13,15 +13,17 @@ const Topbar = (props)=>{
                 <div>
                     <FontAwesomeIcon
                         className="arrow-img"
-                        size='xl'
+                        // size='xl'
                         icon={faArrowAltCircleDown}
                         onClick={props.pageUp}
+                        alt='icon page down'
                     />
                     <FontAwesomeIcon
                         className="arrow-img"
-                        size='xl'
+                        // size='xl'
                         icon={faArrowAltCircleUp}
                         onClick={props.pageDown}
+                        alt='icon page up'
                     />
                 </div>
                 <h2>{props.title}</h2>

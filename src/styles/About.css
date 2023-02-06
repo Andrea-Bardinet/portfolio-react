@@ -1,0 +1,10 @@
+.About{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(255, 21, 111); */
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    color: white;
+}

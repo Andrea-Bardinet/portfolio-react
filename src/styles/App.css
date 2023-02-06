@@ -1,6 +1,7 @@
 html body {
   padding: 0;
   margin: 0;
+  /* height: 100vh;ls */
   background-color: black;
 }
 
@@ -27,12 +28,16 @@ html body {
   /* justify-content: center; */
 }
 
+.page{
+  background-color: transparent;
+}
 
 
-@media (max-width: 500px) {
-  .App>*:first-child {
-    height: 87vh;
-  }
+
+.App>*:first-child {
+  height: 87vh;
+}
+@media (max-width: 600px) {
 }
 
 @media (min-width: 315px) {

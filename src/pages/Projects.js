@@ -32,11 +32,11 @@ const Projects = (props) => {
 
     useEffect(() => {
         props.scrollManager.down = '/skills'
-        props.scrollManager.up = '/projects'
+        props.scrollManager.up = '/about'
     })
 
     return (
-        <motion.div className='Projects'
+        <motion.div className='Projects page'
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}>
