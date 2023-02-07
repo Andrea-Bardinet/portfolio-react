@@ -82,16 +82,13 @@ const variants = {
 };
 
 
-
-
-
 const SkillIcon = (props) => {
     return (
         <motion.div
 
             className="SkillIcon"
         >
-            <img src={props.src[0]} title={props.src[1]} alt={"Logo of " + props.src[1]}></img>
+            <img src={props.src[0]} /* title={props.src[1]} */ alt={"Logo of " + props.src[1]}></img>
             <p>{props.src[1]}</p>
         </motion.div>
     )
@@ -154,7 +151,6 @@ const Skills = (props) => {
         </motion.div>
     )
 }
-
 
 export default Skills;
 

@@ -7,19 +7,50 @@ import Topbar from "../components/Topbar";
 const PROJECTS = [
     {
         title: "DBLOCADATA",
-        description: "Anim ex do esse aliquip laborum cillum veniam anim proident. Ex duis fugiat enim nulla voluptate ut velit proident incididunt aliqua reprehenderit. Dolore sint cillum sit ad ad excepteur culpa est voluptate consequat cupidatat excepteur quis. Exercitation dolor eu ex voluptate proident proident aliqua incididunt aute.",
+        description: "Website allowing to visually program microcontrollers. The aim is to enable citizens to capture data from their living environment. This is part of a process of appropriation of technologies by the general public.",
         date: "April 2022",
         link: "https://dblocadata.debrouillonet.org"
     },
     {
+        title: "SplitMe",
+        description: "Useless site to waste your time 😃",
+        date: "September 2022",
+        link: ""
+    },
+    {
+        title: "Film database",
+        description: "A complete symfony project displaying data from a database containing series. You can create an account, post comments and rate the episodes.",
+        date: "January 2022"
+    },
+    {
+        title: "Simon",
+        description: "A simple JS simon game.",
+        date: "May 2021",
+        link: ""
+    },
+    {
         title: "DailyOneFace",
-        description: "Id aute in nisi amet officia. Qui sit sunt pariatur amet officia proident ea tempor duis. Et qui aute pariatur exercitation occaecat cillum aute dolore.",
+        description: "Python program that posted 2 pictures a day on an instagram account. ",
         date: "January 2021",
         link: "https://www.instagram.com/dailyoneface/"
-
+    },
+    {
+        title: "C projects",
+        description: "Compilation of small projects in C. This includes : A labyrinth generator, a fake french words generator, minesweeper.",
+        date: "2019",
+        link: ""
     }
+
+
 ]
 
+// Projets :
+//  
+// simon
+// puissance4
+// splitMe
+// botVisage
+// 
 const container = {
     animate: {
         transition: {
@@ -61,13 +92,6 @@ export default Projects;
 
 
 
-// Projets :
-//  
-// simon
-// puissance4
-// splitMe
-// botVisage
-// 
 // 
 // 
 // 

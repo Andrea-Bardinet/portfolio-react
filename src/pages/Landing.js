@@ -38,7 +38,7 @@ const Landing = (props) => {
     const aboutImgs = ()=>{
         MySwal.fire({
             // title: <h1>About the images</h1>,
-            html: <p>These images were generated with <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" >Stable Diffusion</a> from a description of myself. Then I varied the styles to get different renders.=(</p>
+            html: <p>These images were generated with <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" >Stable Diffusion</a> from a description of myself. Then I varied the styles to get different renders.</p>
           })
     }
 

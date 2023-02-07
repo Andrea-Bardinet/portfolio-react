@@ -11,13 +11,14 @@ const Topbar = (props)=>{
     return (
         <div className='Topbar'>
                 <div>
+                    {props.end !== true  && 
                     <FontAwesomeIcon
                         className="arrow-img"
                         // size='xl'
                         icon={faArrowAltCircleDown}
                         onClick={props.pageUp}
                         alt='icon page down'
-                    />
+                    />}
                     <FontAwesomeIcon
                         className="arrow-img"
                         // size='xl'

@@ -1,4 +1,4 @@
-.About{
+.About {
     width: 100vw;
     height: 100vh;
     /* background-color: rgb(255, 21, 111); */
@@ -9,7 +9,7 @@
     color: white;
 }
 
-.flex-container{
+.flex-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,20 +21,20 @@
     stroke-width: 2;
     stroke-linejoin: round;
     stroke-linecap: round;
-    width: auto;
+    width: 50px;
     max-width: 50px;
     transition: filter .5s ease-out;
     /* background-color: red; */
 }
 
 
-.About > .flex-container > .link{
+.About>.flex-container>.link {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
-    width: 150px;
+    width: 300px;
     /* border: solid 1px red; */
     /* border: solid 2px white; */
     /* background-color: gray; */
@@ -44,18 +44,20 @@
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .5s ease-out;
-margin-top: 20px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.About > .flex-container > .link:hover{
+.About>.flex-container>.link:hover {
     background-position: left bottom;
     color: black;
 }
 
-.About > .flex-container > .link:hover > .logo-icon{
+.About>.flex-container>.link:hover>.logo-icon {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(314deg) brightness(101%) contrast(101%);
 }
 
-.link > p {
+.link>p {
     font-size: 20px;
 }
