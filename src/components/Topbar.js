@@ -1,7 +1,7 @@
 import '../styles/Topbar.css'
 import { faArrowAltCircleDown, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import logo from '../imgs/AB_logo.png'
 
 const Topbar = (props)=>{
 
@@ -27,6 +27,7 @@ const Topbar = (props)=>{
                     />
                 </div>
                 <h2>{props.title}</h2>
+                {/* <img src={logo}></img> */}
             </div>
     )
 }

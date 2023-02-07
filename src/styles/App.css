@@ -1,7 +1,7 @@
 html body {
   padding: 0;
   margin: 0;
-  /* height: 100vh;ls */
+  /* height: 100vh; */
   background-color: black;
 }
 
@@ -32,6 +32,10 @@ html body {
   background-color: transparent;
 }
 
+.swal2-popup, .swal2-modal, .swal2-show{
+  background-color: red;
+  border: solid 3px red;;
+}
 
 
 .App>*:first-child {

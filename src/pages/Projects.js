@@ -41,7 +41,7 @@ const Projects = (props) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}>
 
-            <Topbar title='Ad deserunt.' pageUp={props.pageUp} pageDown={props.pageDown}></Topbar>
+            <Topbar title='Projects' pageUp={props.pageUp} pageDown={props.pageDown}></Topbar>
 
             <motion.div
                 initial="initial"

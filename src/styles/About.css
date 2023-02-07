@@ -2,9 +2,60 @@
     width: 100vw;
     height: 100vh;
     /* background-color: rgb(255, 21, 111); */
-    background-color: black;
+    background-color: transparent;
 
     display: flex;
     flex-direction: column;
     color: white;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-icon {
+    overflow: visible;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    width: auto;
+    max-width: 50px;
+    transition: filter .5s ease-out;
+    /* background-color: red; */
+}
+
+
+.About > .flex-container > .link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 150px;
+    /* border: solid 1px red; */
+    /* border: solid 2px white; */
+    /* background-color: gray; */
+    padding: 0px;
+    border-radius: 50px;
+    background: linear-gradient(to right, white 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+margin-top: 20px;
+}
+
+.About > .flex-container > .link:hover{
+    background-position: left bottom;
+    color: black;
+}
+
+.About > .flex-container > .link:hover > .logo-icon{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(314deg) brightness(101%) contrast(101%);
+}
+
+.link > p {
+    font-size: 20px;
 }

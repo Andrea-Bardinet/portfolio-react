@@ -1,9 +1,6 @@
 import '../styles/Skills.css'
-import andrea from '../imgs/pdp_white.png'
 
 import {  motion } from "framer-motion"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowAltCircleUp, faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Topbar from '../components/Topbar';
@@ -23,14 +20,6 @@ import linux from '../imgs/skills/linux.svg'
 import git from '../imgs/skills/git.svg'
 import autoit from '../imgs/skills/autoit.svg'
 import gimp from '../imgs/skills/gimp.png'
-
-/*
-
-Web : react express symfony bootstrap 
-General programming : C Java Python AndroidStudio
-bdd : mysql Oracle mongodb
-other tools : linux git autoit gimp
-*/
 
 const SKILLS = [
     {
@@ -144,7 +133,7 @@ const Skills = (props) => {
             exit={{ opacity: 0, y: 0 }}
         >
 
-           <Topbar title='Ad deserunt.' pageUp={props.pageUp} pageDown={props.pageDown}></Topbar>
+           <Topbar title='Skills' pageUp={props.pageUp} pageDown={props.pageDown}></Topbar>
 
 
             <div className='flex-container'>

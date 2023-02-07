@@ -1,24 +1,12 @@
 import '../styles/Landing.css'
-
-import andrea from '../imgs/skills/react.svg'
-
-import ReactDOM from 'react-dom'
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleDown, faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 import { motion } from "framer-motion"
-import { useScrollDirection } from 'react-use-scroll-direction'
-import { AnimatePresence } from "framer-motion";
-import { faPersonWalkingDashedLineArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-
-import react from '../imgs/skills/react.svg'
-import express from '../imgs/skills/express.svg'
-import symfony from '../imgs/skills/symfony.svg'
-import bootstrap from '../imgs/skills/bootstrap.svg'
-import c from '../imgs/skills/c.svg'
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 function importAll(r) {
     let images = {};
@@ -41,27 +29,18 @@ const getAge = (dateString) => {
 const Landing = (props) => {
 
 
-
-
-    const navigate = useNavigate();
-    const { isScrollingUp, scrollTargetRef } = useScrollDirection()
-
-
     useEffect(() => {
         props.scrollManager.down = '/'
         props.scrollManager.up = '/skills'
     })
 
-
-
-    const scrollEvent = () => {
-        console.log("ouee");
-        if (!isScrollingUp) {
-            navigate('skills')
-        }
+    const MySwal = withReactContent(Swal)
+    const aboutImgs = ()=>{
+        MySwal.fire({
+            // title: <h1>About the images</h1>,
+            html: <p>These images were generated with <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" >Stable Diffusion</a> from a description of myself. Then I varied the styles to get different renders.=(</p>
+          })
     }
-
-    document.addEventListener("scroll", scrollEvent);
 
     return (
 
@@ -70,12 +49,12 @@ const Landing = (props) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}
 
-            onScroll={() => { console.log(); }}>
+            >
             <div className='speech'>
                 <h1>Andréa Bardinet</h1>
-                <h2>Web Developper</h2>
+                <h2>Web Developer</h2>
                 <p>
-                    I'm a {getAge("12/26/2000")} years old developper. I'm working on my own on differents techs and projects, currently more focused on web development.
+                    I'm a {getAge("12/26/2000")} years old developer. I'm working on my own on differents techs and projects, currently more focused on web development.
 
                 </p>
                 <FontAwesomeIcon
@@ -112,7 +91,7 @@ const Landing = (props) => {
                     className="question-img"
                     size='xl'
                     icon={faCircleQuestion}
-                    onClick={props.pageUp} />
+                    onClick={aboutImgs} />
 
 
             </div>
