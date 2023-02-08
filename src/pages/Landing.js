@@ -58,7 +58,7 @@ const Landing = (props) => {
                 <h1>Andréa Bardinet</h1>
                 <h2>Web Developer</h2>
                 <p>
-                    I'm a {getAge("12/26/2000")} years old developer. I'm working on my own on differents techs and projects, currently more focused on web development.
+                    I'm a {getAge("12/26/2000")} years old developer. I'm working on my own on different techs and projects, currently more focused on web development.
 
                 </p>
                 <FontAwesomeIcon
