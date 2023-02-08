@@ -15,18 +15,13 @@ const PROJECTS = [
         title: "SplitMe",
         description: "Useless site to waste your time 😃",
         date: "September 2022",
-        link: ""
+        link: "https://github.com/TripleLardon/split-me"
     },
     {
         title: "Film database",
         description: "A complete symfony project displaying data from a database containing series. You can create an account, post comments and rate the episodes.",
-        date: "January 2022"
-    },
-    {
-        title: "Simon",
-        description: "A simple JS simon game.",
-        date: "May 2021",
-        link: ""
+        date: "January 2022",
+        link: "https://github.com/TripleLardon/series-symfony"
     },
     {
         title: "DailyOneFace",
@@ -38,19 +33,12 @@ const PROJECTS = [
         title: "C projects",
         description: "Compilation of small projects in C. This includes : A labyrinth generator, a fake french words generator, minesweeper.",
         date: "2019",
-        link: ""
+        link: "https://github.com/TripleLardon/old-c-projects"
     }
 
 
 ]
 
-// Projets :
-//  
-// simon
-// puissance4
-// splitMe
-// botVisage
-// 
 const container = {
     animate: {
         transition: {
@@ -89,12 +77,3 @@ const Projects = (props) => {
 }
 
 export default Projects;
-
-
-
-// 
-// 
-// 
-// 
-// 
-// 

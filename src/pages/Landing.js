@@ -13,7 +13,11 @@ function importAll(r) {
     r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
     return images
 }
-const IMGS = importAll(require.context('../imgs/andrea', false, /\.(png|jpe?g|svg)$/));
+let IMGS = importAll(require.context('../imgs/andrea', false, /\.(png|jpe?g|svg)$/));
+ let keyIMGS = Object.keys(IMGS);
+// drop your preffered shuffle algorithm here
+keyIMGS.sort(function(a,b) {return Math.random() - 0.5;});
+console.log(IMGS);
 
 const getAge = (dateString) => {
     var today = new Date();
@@ -77,11 +81,11 @@ const Landing = (props) => {
                     swipeable={false}
 
                 >
-                    {Object.keys(IMGS).map((key) => {
+                    {Object.keys(keyIMGS).map((key) => {
 
                         return (
                             <div key={key}>
-                                <img src={IMGS[key]} />
+                                <img src={IMGS[keyIMGS[key]]} />
                             </div>)
                     })}
                 </Carousel>
