@@ -78,7 +78,7 @@ const Landing = (props) => {
                     showIndicators={false}
                     showThumbs={false}
                     // verticalSwipe="natural"
-                    swipeable={false}
+                    swipeable={true}
 
                 >
                     {Object.keys(keyIMGS).map((key) => {
